@@ -1,0 +1,44 @@
+.formulario {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+.formulario .containerLabel {
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.formulario label {
+  font-family: Helvetica NeueRegular;
+  font-size: 13px;
+}
+.formulario .inputTexto {
+  width: 95%;
+  height: 3vh;
+  margin: 1rem 0;
+  border: 1px solid #707070;
+}
+.formulario .labelRadio:nth-child(1) {
+  padding-right: 3rem;
+}
+.formulario .radio {
+  margin-right: 0.5rem;
+}
+.formulario .btnEnviar {
+  width: 95%;
+}
+
+@media (min-width: 700px) {
+.formulario {
+  height: 30vh;
+}
+  .formulario .inputTexto {
+    width: 16vw;
+  }
+  .formulario .labelRadio:nth-child(1) {
+    padding-right: 2rem;
+  }
+  .formulario .btnEnviar {
+    width: 16vw;
+  }
+}
