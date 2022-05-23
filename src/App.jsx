@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <Cabecalho />
       <AjudeAlgoritimo />
-      {/* <Produtos />
-      <Compartilhe />
+      <Produtos />
+      {/* <Compartilhe />
       <Rodape /> */}
     </div>
   );
