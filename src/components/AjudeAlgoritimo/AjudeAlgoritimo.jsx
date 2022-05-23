@@ -9,20 +9,19 @@ export default function AjudeAlgoritimo() {
   const detailsRef = useRef(null);
 
   useEffect(() => {
-    if (width > 700) {
+    if (width > 760) {
       detailsRef.current.open = true;
     }
   }, [width]);
 
   const handleDetailsClick = (e) => {
-    if (width > 700) {
+    if (width > 760) {
       e.preventDefault();
     }
   };
   return (
     <section className={styles.secao}>
       <aside>
-       
         <details open ref={detailsRef} onClick={handleDetailsClick}>
           <summary className={styles.secaoTitulo}>
             <h1>Ajude o algorítimo a ser mais certeiro</h1>
