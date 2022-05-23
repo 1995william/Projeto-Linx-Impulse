@@ -4,13 +4,14 @@
     display: flex;
     align-items: center;
     text-align: center;
-    font: 1.2rem Helvetica-bold;
+    font: 1.2rem Helvetica NeueBold;
+    color: #707070;
   }
   
   .Divisor::after,
   .Divisor::before {
     content: "";
-    border: 1px solid black;
+    border: 1px solid #707070;
     flex: 1;
   }
   

@@ -38,7 +38,7 @@
   width: 80%;
   margin: 0 auto;
 }
-@media (min-width: 700px) {
+@media (min-width: 760px) {
   .diagonal {
     transform: skewY(5deg);
   }
