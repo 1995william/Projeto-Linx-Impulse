@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import AjudeAlgoritimo from "./components/AjudeAlgoritimo/AjudeAlgoritimo";
 import Produtos from "./components/Produtos/Produtos";
@@ -12,8 +11,8 @@ function App() {
       <Cabecalho />
       <AjudeAlgoritimo />
       <Produtos />
-      {/* <Compartilhe />
-      <Rodape /> */}
+      <Compartilhe />
+      <Rodape />
     </div>
   );
 }
