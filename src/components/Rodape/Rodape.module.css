@@ -1,0 +1,23 @@
+.rodapeContainer {
+    height: 25vh;
+    margin-top: 5rem;
+    background: rgb(68, 27, 95);
+    clip-path: polygon(0% 30%, 100% 0%, 100% 100%, 0% 100%);  
+}
+.rodapeContainer section {
+    margin: 0 auto;
+    padding-top: 7rem;
+    font-family: Helvetica NeueRegular;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: 1px;
+}
+@media (min-width: 760px) {
+    .rodapeContainer {
+        height: 30vh;
+    }
+    .rodapeContainer section {
+        padding-top: 10rem;
+    }
+}
