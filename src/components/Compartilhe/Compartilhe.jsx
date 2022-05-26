@@ -7,7 +7,7 @@ export default function Compartilhe() {
     <section className={styles.secaoContainer}>
       <Divisor texto="Compartilhe a novidade" />
 
-      <div className={styles.secao}>
+      <div className={styles.secao} id="compartilhe">
         <aside>
           <p>
             Quer que seus amigos também ganhem a lista personalizada deles?
