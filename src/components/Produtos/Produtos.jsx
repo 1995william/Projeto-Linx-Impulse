@@ -16,7 +16,7 @@ export default function Produtos() {
   }, [contador]);
   return (
     <div className={styles.containerSecaoProdutos}>
-      <section className={styles.secaoProdutos}>
+      <section id="produtos" className={styles.secaoProdutos}>
         <Divisor texto={"Sua seleção especial"} />
         <ul className={styles.containerProdutos}>
           <Lista produtos={produtos} />
