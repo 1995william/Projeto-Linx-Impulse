@@ -17,16 +17,16 @@ export default function Cabecalho() {
       <nav className={styles.navegacao}>
         <ul>
           <li>
-            <Botao  texto="Conheça a Linx" />
+            <a href="#"><Botao  texto="Conheça a Linx" /></a> 
           </li>
           <li>
-            <Botao texto="Ajude o algorítimo" />
+          <a href="#algoritimo"> <Botao texto="Ajude o algorítimo" /></a>
           </li>
           <li>
-            <Botao texto="Seus produtos" />
+          <a href="#produtos"><Botao href="#produtos" texto="Seus produtos" /></a> 
           </li>
           <li>
-            <Botao texto="Compartilhe" />
+           <a href="#compartilhe"><Botao texto="Compartilhe" /></a> 
           </li>
         </ul>
       </nav>
