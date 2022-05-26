@@ -8,6 +8,16 @@
   justify-content: center;
   margin: 1rem 0;
 }
+.msgSucesso {
+  color: green;
+  font-family: Helvetica NeueBold;
+  font-size: 14px;
+}
+.msgErro {
+  color: red;
+  font-family: Helvetica NeueBold;
+  font-size: 14px;
+}
 .formulario label {
   font-family: Helvetica NeueRegular;
   font-size: 13px;
@@ -17,6 +27,8 @@
   height: 2rem;
   margin: 1rem 0;
   border: 1px solid #707070;
+  font-family: Helvetica NeueRegular;
+  font-weight: bold;
 }
 .formulario .labelRadio:nth-child(1) {
   padding-right: 3rem;
@@ -29,16 +41,19 @@
 }
 
 @media (min-width: 760px) {
-.formulario {
-  height: 30vh;
-}
+  .formulario {
+    height: 30vh;
+  }
   .formulario .inputTexto {
     width: 16vw;
+  }
+  .formulario .inputTexto {
+    padding-left: 0.5rem;
   }
   .formulario .labelRadio:nth-child(1) {
     padding-right: 2rem;
   }
   .formulario .btnEnviar {
-    width: 16vw;
+    width: 100%;
   }
 }
