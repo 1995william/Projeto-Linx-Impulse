@@ -1,31 +1,36 @@
 import Formulario from "./Formulario/Formulario";
 import svgArrow from "../../assets/imgs/arrowUp.svg";
 import styles from "./AjudeAlgoritmo.module.css";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import useWindowDimensions from "../../utils/useWindowDimensions";
 
 export default function AjudeAlgoritimo() {
   const { height, width } = useWindowDimensions();
   const detailsRef = useRef(null);
-
+  const [arrowDown, setDown] = useState(true);
   useEffect(() => {
     if (width > 760) {
       detailsRef.current.open = true;
     }
   }, [width]);
 
+  const contentClassname = arrowDown
+    ? `${styles["arrowDown"]} ${styles.img}`
+    : styles.img;
+
   const handleDetailsClick = (e) => {
-    if (width > 760) {
-      e.preventDefault();
-    }
+    if (width > 760) e.preventDefault();
   };
   return (
     <section className={styles.secao}>
       <aside>
-        <details open ref={detailsRef} onClick={handleDetailsClick}>
-          <summary className={styles.secaoTitulo}>
+        <details open id="algoritimo" ref={detailsRef} onClick={handleDetailsClick}>
+          <summary
+            className={styles.secaoTitulo}
+            onClick={() => setDown(!arrowDown)}
+          >
             <h1>Ajude o algorítimo a ser mais certeiro</h1>
-            <img src={svgArrow} alt="arrow" />
+            <img className={contentClassname} src={svgArrow} alt="arrow" />
           </summary>
           <article>
             <p>
