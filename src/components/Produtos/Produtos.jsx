@@ -3,16 +3,19 @@ import Divisor from "../Divisor/Divisor";
 import styles from "./Produtos.module.css";
 import { useState, useEffect } from "react";
 import Lista from "./Lista";
+import { apiProdutos } from "../../service/apiProdutos";
 
 export default function Produtos() {
   const [produtos, setProdutos] = useState([]);
   const [contador, setContador] = useState(1);
 
-  const url = `https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=${contador}`;
   useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((res) => setProdutos([...produtos, ...res.products]));
+    const apiData = async () => {
+      const data = await apiProdutos(contador);
+  
+      setProdutos([...produtos, ...data.products]);
+    };
+    apiData();
   }, [contador]);
   return (
     <div className={styles.containerSecaoProdutos}>

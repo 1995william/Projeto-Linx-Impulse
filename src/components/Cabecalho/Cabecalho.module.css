@@ -1,15 +1,15 @@
 .diagonal {
-  width: 100%;
-  height: 50vh;
+  min-width: 100%;
+  min-height: 65%;
   left: 0;
-  bottom: 60%;
+  bottom: 49%;
   z-index: -1;
   position: absolute;
   transform: skewY(15deg);
   background: rgb(68, 27, 95);
 }
 .cabecalho section {
-  margin: 3rem 0;
+  margin: 2rem 0;
   padding: 0 1rem;
 }
 .cabecalho section p:nth-child(1) {
@@ -38,9 +38,21 @@
   width: 80%;
   margin: 0 auto;
 }
+@media (min-width: 380px) {
+    .diagonal {
+      height: 50vh;
+      bottom: 63.5%;
+      transform: skewY(18deg);
+    }
+    .cabecalho section {
+      margin: 3rem 0;
+    }
+}
 @media (min-width: 760px) {
   .diagonal {
-    transform: skewY(5deg);
+    min-height: 70%;
+    bottom: 57.5%;
+    transform: skewY(6deg);
   }
   .cabecalho section {
     display: flex;

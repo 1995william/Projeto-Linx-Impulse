@@ -18,10 +18,11 @@
 .secaoTitulo img {
   width: 22px;
   transition: 0.5s;
+  transform: rotate(180deg);
 }
 
 .secaoTitulo .arrowDown {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
   transition: 0.5s;
 }
 
@@ -31,11 +32,11 @@ details {
 }
 
 details:not([open]) {
-  height: 2em;
+  height: 5em;
 }
 
 details[open] {
-  height: 20em;
+  height: 21em;
 }
 
 .secao p {

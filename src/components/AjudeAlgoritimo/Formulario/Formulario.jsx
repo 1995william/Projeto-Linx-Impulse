@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function Formulario() {
   
   const [user, setUser] = useState({
-    name:'',
+    nome:'',
     email:'',
     cpf:''
   })
@@ -40,7 +40,7 @@ export default function Formulario() {
   }
 
   function validate() {
-    if (!user.name) return setStatus({ type: 'erro', mensagem: 'Preencha o campo nome' });
+    if (!user.nome) return setStatus({ type: 'erro', mensagem: 'Preencha o campo nome' });
     if (!user.email) return setStatus({ type: 'erro', mensagem: 'Preencha o campo Email' });
     if (!user.cpf) return setStatus({ type: 'erro', mensagem: 'Preencha o campo CPF' });
     if (user.cpf.match(/^[0-9]*$/) == null) return setStatus({ type: 'erro', mensagem: 'Digite apenas números no campo CPF' });
@@ -54,7 +54,7 @@ export default function Formulario() {
       {status.type == 'erro'? <small className={styles.msgErro}>{status.mensagem}</small>: ''}
       <label>
         Seu nome: <br />
-        <input className={styles.inputTexto} name="name" type="text" onChange={valueInput} value={user.name}/>
+        <input className={styles.inputTexto} name="nome" type="text" onChange={valueInput} value={user.name} />
       </label>
 
       <label>
@@ -76,7 +76,7 @@ export default function Formulario() {
 
       <div className={styles.containerLabel}>
         <label className={styles.labelRadio}>
-          <input className={styles.radio} name="sexo" type="radio" checked />
+          <input className={styles.radio} name="sexo" type="radio" defaultChecked={true} />
           Masculino
         </label>
 
